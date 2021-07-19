@@ -1,6 +1,9 @@
 from flask import Flask, request, Response
+from flask_cors import CORS
+
 import requests as req
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/json", methods=["GET"])
