@@ -11,6 +11,7 @@
       img.container__logo_twitter(src="@/assets/images/twitter.png", alt="Twitter")
 
 header.container__header
+  h4.logo ipinfo
   nav.container__nav
     ul.container__nav_list
       router-link(to="/", v-slot="{ navigate, isActive }", custom)
@@ -22,6 +23,8 @@ header.container__header
       router-link(to="/about", v-slot="{ navigate, isActive }", custom)
         li.container__nav_item(role="link", :class="{ active: isActive }") 
           a(href="/about", @click="navigate") About
+  footer
+    span Built with VueJS
 </template>
 
 <script>
@@ -75,19 +78,32 @@ logo_base()
       transform: scale(1.2)
 
 .container__header
+  background-color: #222
   display: flex
-  margin-bottom: 2rem
-  margin-top: 0.5rem
-  justify-content: center
+  justify-content: space-between
+  align-items: center
+  transition: 200ms
+
+  .logo
+    color: #d4d4d4
+    padding-left: 1rem
+    letter-spacing: 4px
+
+    &:hover
+      color: #eee
+
+  footer
+    padding-right: 1rem
+
+    span
+      color: #d4d4d4
+
+      &:hover
+        color: #eee
 
   .container__nav
-    width: 100%
-
     .container__nav_list
-      border-radius: 0.5rem
-      background-color: #222
       list-style-type: none
-      text-align: center
 
       .container__nav_item
         display: inline-block

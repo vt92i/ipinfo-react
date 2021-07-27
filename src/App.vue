@@ -22,4 +22,11 @@ body
 
 h1, h2, h3, h4, h5, h6, ul, li
   margin: 0
+
+.container
+  background-color: #eee
+  min-height: 100vh
+
+.container__content
+  padding: 2rem
 </style>
