@@ -86,7 +86,8 @@ logo_base()
 
   .logo
     color: #d4d4d4
-    padding-left: 1rem
+    font-size: 2.4rem
+    padding-left: 2rem
     letter-spacing: 4px
 
     &:hover
