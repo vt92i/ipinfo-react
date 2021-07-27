@@ -3,7 +3,7 @@ transition(appear-active-class="animate__animated animate__fadeIn", appear)
   main.container__content
     h5 IP Lookup Page
     .container__header
-      input.ip-address(type="text", placeholder="Lookup any IPv4 or IPv6 Address", maxlength="46", v-model="ip")
+      input.ip-address(type="text", placeholder="Lookup any IPv4 or IPv6 Address", maxlength="46", v-model="ip", @keyup.enter="fetchData(ip)")
       button.button-primary(@click="fetchData(ip)") Lookup
     transition(enter-active-class="animate__animated animate__fadeIn", leave-active-class="animate__animated animate__fadeOut")
       .container__details(v-if="show")
