@@ -14,7 +14,7 @@ transition(appear-active-class="animate__animated animate__fadeIn", appear)
 
 <script>
 import IPDetails from "../components/IPDetails.vue";
-import validator from "validator";
+import isValidIP from "validator/lib/isIP";
 
 export default {
   components: { IPDetails },
@@ -29,7 +29,7 @@ export default {
     async fetchData(ip) {
       try {
         if (ip.length != 0) {
-          if (validator.isIP(ip)) {
+          if (isValidIP(ip)) {
             (this.ip = []), (this.show = false);
             const response = await fetch(`https://rizze-api-server.herokuapp.com/json/${ip}`);
             const data = await response.json();
