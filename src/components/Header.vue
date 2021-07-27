@@ -15,14 +15,14 @@ header.container__header
   nav.container__nav
     ul.container__nav_list
       router-link(to="/", v-slot="{ navigate, isActive }", custom)
-        li.container__nav_item(role="link", :class="{ active: isActive }") 
-          a(href="/", @click="navigate") Home
+        li.container__nav_item 
+          a(href="/", role="link", :class="{ active: isActive }", @click="navigate") Home
       router-link(to="/ip-lookup", v-slot="{ navigate, isActive }", custom)
-        li.container__nav_item(role="link", :class="{ active: isActive }") 
-          a(href="/ip-lookup", @click="navigate") IP Lookup
+        li.container__nav_item 
+          a(href="/ip-lookup", role="link", :class="{ active: isActive }", @click="navigate") IP Lookup
       router-link(to="/about", v-slot="{ navigate, isActive }", custom)
-        li.container__nav_item(role="link", :class="{ active: isActive }") 
-          a(href="/about", @click="navigate") About
+        li.container__nav_item 
+          a(href="/about", role="link", :class="{ active: isActive }", @click="navigate") About
   footer
     span Built with VueJS
 </template>
@@ -108,14 +108,21 @@ logo_base()
 
       .container__nav_item
         display: inline-block
-        padding: 0.25rem 1rem
+        padding: 1rem 1rem
         transition: background-color 0.25s
 
-      .container__nav_item a
-        color: #d4d4d4
-        font-size: 2rem
-        text-decoration: none
+        .active
+          color: #eee
+          opacity: 1
 
-      .container__nav_item:hover, .active
-        background-color: #111
+      .container__nav_item
+        a
+          color: #d4d4d4
+          font-size: 2rem
+          text-decoration: none
+          opacity: 0.8
+          transition: 0.25s
+
+          &:hover
+            opacity: 1
 </style>
