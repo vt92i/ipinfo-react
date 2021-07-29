@@ -1,0 +1,11 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Hello World!'
+  artifacts:
+    paths:
+    - public
+  only:
+  - main

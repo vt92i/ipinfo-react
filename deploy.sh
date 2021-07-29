@@ -6,16 +6,16 @@ if [ -d "$DIR" ]
 then
     cd dist/
     echo -e "\e[1;32m 1. Initialiazing empty git repository and adding all files to git repository\e[0m"
-    git init
+    rm -rf .git && git init
     git add .
 
     echo -e "\e[1;32m 2. Committing local repository \e[0m"
-    git commit -S -m "Github Deploy"
+    git commit -S -m "Initial Commit"
 
-    git remote add origin https://github.com/vt92i/ipinfo.git
+    git remote add origin https://gitlab.com/ipinfo/ipinfo.gitlab.io.git
 
-    echo -e "\e[1;32m 3. Pushing to Github \e[0m"
-    git push -f origin main:gh-pages
+    echo -e "\e[1;32m 3. Pushing to Gitlab \e[0m"
+    git push --set-upstream origin main -f
 
     printf "\n"
 
