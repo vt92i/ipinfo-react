@@ -1,10 +1,14 @@
 <template lang="pug">
 transition(appear-active-class="animate__animated animate__fadeIn", appear)
   main.container__content
-    h5 This is about page
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ab earum saepe at reiciendis voluptates ullam veritatis dignissimos itaque. Id molestiae tenetur maiores dicta, eligendi delectus distinctio cupiditate adipisci sapiente. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, culpa! Nesciunt nihil eum aspernatur doloribus? Hic voluptate magni corporis quae veniam. Fugiat labore cupiditate aliquam repellat rem magnam, aperiam molestiae.
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestiae dolor temporibus soluta odit. Laudantium temporibus et incidunt? Eligendi quia, consectetur repellendus beatae quaerat sequi expedita dolorum odio commodi. Facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem maxime autem voluptates voluptatum ea animi vel iusto ratione repellat, temporibus eligendi magnam reprehenderit optio accusamus, molestiae a maiores non adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci inventore mollitia quod sit reiciendis? Aperiam aspernatur temporibus iste porro distinctio eaque molestias aliquid, rerum impedit explicabo debitis ea at!
-    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet culpa quibusdam consectetur voluptate, illo nostrum earum odit. Culpa, inventore ab, aliquid nam praesentium nihil, commodi odio aliquam ipsam assumenda error.
+    h5 About
+    p This website will help you to know everything about your IP Address. But it's still under development, means it has some bugs, errors and etc. I will try to fix the bugs and add some features to make better Experience for Users.
+    p This website is free and open source. That means you don't need to pay anything to use this website and you can even download this website source code on Github and host your own website.
+    ul #[strong Some features that I will add later to improve website UI and UX:]
+      li Add mobile responsive
+      li Create privacy policy page
+      li Create articles about IP Address
+      li Redesign website
 </template>>
 
 <script>
@@ -23,4 +27,10 @@ export default {
 
   p
     text-align: justify
+
+  ul
+    text-align: center
+
+    li
+      text-align: left
 </style>
