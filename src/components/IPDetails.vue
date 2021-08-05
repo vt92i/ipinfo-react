@@ -74,6 +74,7 @@ export default {
   .container__table_row
     .container__table_head, .container__table_data
       border-bottom-width: 2.5px
+      user-select: text
 
     .container__table_data
       transition: 200ms
